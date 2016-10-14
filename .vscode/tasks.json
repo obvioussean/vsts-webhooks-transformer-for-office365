@@ -1,18 +1,11 @@
-// A task runner configuration.
 {
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
     "version": "0.1.0",
-    "command": "grunt",
+    "command": "tsc",
     "isShellCommand": true,
-    "tasks": [
-        {
-            "taskName": "build",
-            "isBuildCommand": true,
-            "problemMatcher": "$msCompile"
-        },
-        {
-            "taskName": "publish",
-            "isBuildCommand": false,
-            "problemMatcher": "$msCompile"
-        }
-    ]
+    "args": ["-p", "."],
+    "showOutput": "silent",
+    "problemMatcher": "$tsc",
+    "isWatching": false
 }
