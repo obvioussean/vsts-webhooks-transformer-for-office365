@@ -35,3 +35,10 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+# javascript
+*.js
+*.js.map
+
+# typescripts
+typings
