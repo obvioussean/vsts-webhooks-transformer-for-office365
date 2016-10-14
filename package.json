@@ -11,7 +11,7 @@
   },
   "name": "vstswebhoookstransformerforoffice365",
   "scripts": {
-    "postinstall": "typings install",
+    "postinstall": "typings install && tsc",
     "start": "node server"
   },
   "engines": {
