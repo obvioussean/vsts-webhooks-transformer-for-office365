@@ -2,6 +2,10 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-ts": "^6.0.0-beta.3",
     "request": "^2.75.0",
     "require": "^2.4.20",
     "typescript": "^2.0.3",
@@ -10,7 +14,7 @@
   "name": "vstswebhoookstransformerforoffice365",
   "scripts": {
     "postinstall": "typings install",
-    "prepublish": "tsc",
+    "prepublish": "grunt",
     "start": "node server.js"
   }
 }
