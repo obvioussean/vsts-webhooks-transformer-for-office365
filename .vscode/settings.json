@@ -4,7 +4,11 @@
         "**/*.js": {
             "when": "$(basename).ts"
         },
-        "*.js.map": true,
+        "**/*.js.map": {
+            "when": "$(basename).ts"
+        },
+        "node_modules": true,
+        "dist": true,
         "*.gitignore": true
     }
 }
