@@ -3,8 +3,8 @@ import * as express from "express";
 import * as bodyParser from "body-parser";
 import * as http from "http";
 import * as request from "request";
-import { WebHook } from "./webhook";
-import { IConnector } from "./office";
+import { WebHook, PullRequestResource } from "./webhook";
+import { Connector } from "./office";
 
 let port = process.env.PORT || 8081;
 let server = express();
@@ -16,8 +16,19 @@ server.get('/', (request, response) => {
 
 server.post('/pr', (req, response) => {
   let url = req.query.url;
-  let webhook: WebHook = req.body;
-  let connector: IConnector = {
+  let webhook: WebHook<PullRequestResource> = req.body;
+  let target: string;
+  if (webhook.resource &&
+    webhook.resource._links &&
+    webhook.resource._links.web &&
+    webhook.resource._links.web.href) {
+    target = webhook.resource._links.web.href;
+  }
+  else {
+    target = webhook.resource.url;
+  }
+
+  let connector: Connector = {
     text: webhook.detailedMessage.markdown,
     themeColor: "EA4300",
     potentialAction: [
@@ -25,7 +36,7 @@ server.post('/pr', (req, response) => {
         "@context": "http://schema.org",
         "@type": "ViewAction",
         "name": `View PR`,
-        "target": [webhook.resource.url]
+        "target": [target]
       }
     ]
   };
