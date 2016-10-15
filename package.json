@@ -7,9 +7,9 @@
     "typescript": "^2.0.3",
     "typings": "^1.4.0"
   },
-  "name": "vstswebhoookstransformerforoffice365",
+  "name": "vsts-webhoooks-transformer-for-office365",
   "scripts": {
-    "postinstall": "typings install",
+    "postinstall": "npm install -g typescript && typings install",
     "prepublish": "tsc",
     "start": "node server.js"
   }
