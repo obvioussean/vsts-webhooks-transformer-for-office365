@@ -12,5 +12,8 @@
     "postinstall": "npm install -g typescript && typings install",
     "prepublish": "tsc",
     "start": "node server.js"
+  },
+  "engines": {
+    "node": "4.6.0 "
   }
 }
