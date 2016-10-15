@@ -18,6 +18,8 @@ server.post('/pr', (req, response) => {
   let url = req.query.url;
   let webhook: WebHook<PullRequestResource> = req.body;
   let target: string;
+
+  // this is enabled in m107
   if (webhook.resource &&
     webhook.resource._links &&
     webhook.resource._links.web &&
