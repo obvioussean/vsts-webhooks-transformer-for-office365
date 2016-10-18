@@ -5,7 +5,8 @@
     "request": "^2.75.0",
     "require": "^2.4.20",
     "typescript": "^2.0.3",
-    "typings": "^1.4.0"
+    "typings": "^1.4.0",
+    "vso-node-api": "^5.0.5"
   },
   "name": "vsts-webhoooks-transformer-for-office365",
   "scripts": {

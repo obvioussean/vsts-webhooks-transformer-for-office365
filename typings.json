@@ -5,8 +5,10 @@
     "express-serve-static-core": "registry:dt/express-serve-static-core#4.0.0+20161012061536",
     "form-data": "registry:dt/form-data#0.0.0+20160724024111",
     "mime": "registry:dt/mime#0.0.0+20160316155526",
-    "node": "registry:dt/node#6.0.0+20161010101523",
+    "node-4": "registry:dt/node-4#4.0.0+20161010101523",
+    "q": "registry:dt/q#0.0.0+20161004185634",
     "request": "registry:dt/request#0.0.0+20160726020908",
-    "serve-static": "registry:dt/serve-static#0.0.0+20160606155157"
+    "serve-static": "registry:dt/serve-static#0.0.0+20160606155157",
+    "vso-node-api": "registry:dt/vso-node-api#0.3.2+20160724062053"
   }
 }

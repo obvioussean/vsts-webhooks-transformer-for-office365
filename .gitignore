@@ -37,7 +37,8 @@ jspm_packages
 .node_repl_history
 
 # javascript
-dist
+scripts/*.js.map
+scripts/*.js
 
 # typescripts
 typings
